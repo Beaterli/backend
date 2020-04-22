@@ -1,0 +1,57 @@
+{
+  "hikari": {
+    "singleton": {
+      "dataSourceClassName": "com.mysql.cj.jdbc.MysqlDataSource",
+      "dataSource.url": "jdbc:mysql://localhost:3306/weibo?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC",
+      "dataSource.user": "root",
+      "dataSource.password": "root",
+      "maximumPoolSize": "5",
+      "connectionTimeout": "5000"
+    }
+  },
+  "permission": {
+    "data_source": "singleton",
+    "allow_origin": "http://localhost:3006",
+    "path": {
+      "unrestricted": [
+        "*.js",
+        "*.swf",
+        "*.css",
+        "*.jpg",
+        "*.png",
+        "*.gif",
+        "*.ico",
+        "*.html",
+        "*.less",
+        "/static/*",
+        "/login",
+        "/myRole",
+        "/",
+        "/checkalive",
+        "/neo4j"
+      ],
+      "admin": [
+        "/neo4j",
+        "/events",
+        "/blogs",
+        "/comments",
+        "/stageList",
+        "/stages",
+        "/heatList",
+        "/heat",
+        "/tree",
+        "/users",
+        "/addUser",
+        "/deleteUser",
+        "/changePassword",
+        "/logout",
+        "/accessLog"
+      ]
+    }
+  },
+  "time_formats": [
+    "yyyy-MM-dd HH:mm:ss.SSS",
+    "yyyy-MM-dd HH:mm:ss:SSS",
+    "yyyy-MM-dd HH:mm:ss"
+  ]
+}
